@@ -1,6 +1,7 @@
 import { ICONS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import DropdownList from "./DropdownList";
 
 const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
   return (
@@ -9,7 +10,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
         <div className="details">
           {userImg && (
             <Image
-              src={userImg || "assets/images/dummy.jpg"}
+              src={userImg}
               alt="user"
               width={66}
               height={66}
@@ -40,6 +41,24 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
             </button>
           </div>
         </aside>
+      </section>
+
+      <section className="search-filter">
+        <div className="search">
+          <input 
+            type="text"
+            placeholder="Search for video, tags, folders ...."
+          />
+          <Image 
+            src='/assets/icons/search.svg'
+            alt="search"
+            width={16}
+            height={16}
+          
+          />
+        </div>
+
+        <DropdownList />
       </section>
     </header>
   );
