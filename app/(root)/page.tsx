@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import VideoCard from '@/components/VideoCard'
 import React from 'react'
 
 const Page = () => {
@@ -9,6 +10,18 @@ const Page = () => {
         subHeader='Public Library'
       />
       <h1 className='text-2xl font-karla'>Welcome to Loom Clone</h1>
+
+      <VideoCard 
+        id= '1'
+        title='Loom Message'
+        thumbnail='/assets/samples/thumbnail (1).png'
+        createdAt= '2025-05-01'
+        userImg='/assets/images/jason.png'
+        username='Jason'
+        views={10}
+        visibility='public'
+        duration={156}
+      />
     </main>
   )
 }
