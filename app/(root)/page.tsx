@@ -1,7 +1,6 @@
 import Header from '@/components/Header'
 import VideoCard from '@/components/VideoCard'
 import { dummyCards } from '@/constants'
-import React from 'react'
 
 const Page = () => {
   return (
@@ -12,7 +11,7 @@ const Page = () => {
       />
 
       {dummyCards.map((card) => (
-        <VideoCard {...card}/>
+        <VideoCard key={card.id} {...card}/>
       ))}
     </main>
   )
